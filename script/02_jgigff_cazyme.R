@@ -17,7 +17,7 @@ fileList <- tibble(original=prot_dire, species=prot_file)
 
 # Load cazyme JGI ----
 
-path <- "../cazydb.xlsx"
+path <- "input/cazydbJGI.xlsx"
 sheets <- excel_sheets(path = path)
 df_list <- lapply(excel_sheets(path), function(x)
   read_excel(path, sheet = x)
