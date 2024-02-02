@@ -80,3 +80,5 @@ for i in `ls tmhmm_phobius/*phobius.faa*`; do grep -iHEc '>' $i | sed 's/:/\t/g'
 ### **12. Make the summary graphic**
 
 Run 05_graph.R
+
+![Figure 2](https://github.com/mvapontes/Srivastava_AnnualReviewPlantPathology_2023/blob/main/plots/phylo_cazyme_effectors.pdf)
