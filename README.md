@@ -1,21 +1,21 @@
 Analysis and supplementary data for Srivastava 
 
-### **1 . Species selected**
+### **1. Download data**
 
-Download proteome and annotation for each species in the Supplementary file genomes, also found in the input folder. 
+Download proteome and annotation (gtf/gff) for each species in the Supplementary file genomes, also found in the input folder. 
 
-### **2 . Select the longest protein per gene**
+### **2. Select unique longest protein per gene**
 
-Use 01_longest_prot.R 
+Run 01_longest_prot.R 
 
-The output is a fasta file per species including the longest protein per gene, rename by gene name. 
+The output is a fasta file per species including the longest amino acid sequence per gene, rename by gene name. 
 
 ### **3. Ortholog analysis**
 
-We decided to run OrthoFinder to identify ortholog groups. Additionally, the concatenated multiple sequence aligment out of genes in orthogroups with only one copy and present in all species was used to infered a tree with [MAFFT](https://mafft.cbrc.jp/alignment/software/) (MAFFT v7.453 (2019/Nov/8) [MBE 30:772-780 (2013)](https://doi.org/10.1093/molbev/mst010), [NAR 30:3059-3066 (2002)](https://doi.org/10.1093/nar/gkf436))
+We decided to run [OrthoFinder](https://github.com/davidemms/OrthoFinder) to identify ortholog groups. Additionally, the concatenated multiple sequence aligment (MSA) of genes in orthogroups with only one copy and present in all species was used to infered a tree with [MAFFT](https://mafft.cbrc.jp/alignment/software/) v7.453 _[MBE 30:772-780 (2013)](https://doi.org/10.1093/molbev/mst010); [NAR 30:3059-3066 (2002)](https://doi.org/10.1093/nar/gkf436)_
 
 ### **4. Identify signal peptides with [SignalP 5.0](https://services.healthtech.dtu.dk/services/SignalP-5.0/)** 
-[Nat Biotechnol 37:420-423 (2019)](https://doi.org/10.1038/s41587-019-0036-z)
+_[Nat Biotechnol 37:420-423 (2019)](https://doi.org/10.1038/s41587-019-0036-z)_
 
 Use the following command (bash) to run signalp locally per genome. 
 

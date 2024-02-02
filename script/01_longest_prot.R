@@ -1,14 +1,11 @@
 #!/usr/bin/env Rscript
 
-
 #  Script to obtain the longest protein per gene
 
 # Author: MVAP
 
-## Many (if not all) proteomes from NCBI contained all transcript/cds/proteins predicted and therefore you get soooo many duplications in busco or that many orthologs in a tree.
-
-## In this script I decided to keep only the longest aminoacid sequence per gene, not the longest transcript
-## if two proteins have the same length I keep one
+## To keep only the longest aminoacid sequence per gene, not the longest transcript
+## if two proteins have the same length I keep one interchangeably
 
 # Load all packages ----
 lapply(c("Biostrings", 
@@ -27,9 +24,6 @@ prot_dire <- list.files(path = "newSpecies/",
                         recursive = TRUE)
 
 # . get only gtf and faa ----
-
-## I have previously checked an old genomes contained gtf but not gff and most importantly all gtf seem to have the same field names
-
 prot_dire <- grep(prot_dire, pattern = 'genomic.gtf|protein.faa',
                   invert=FALSE, 
                   value=TRUE)
