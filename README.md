@@ -81,4 +81,4 @@ for i in `ls tmhmm_phobius/*phobius.faa*`; do grep -iHEc '>' $i | sed 's/:/\t/g'
 
 Run 05_graph.R
 
-![Figure 2](/plots/phylo_cazyme_effectors.tif)
+![Figure 2](/plots/phylo_cazyme_effectors.png)
